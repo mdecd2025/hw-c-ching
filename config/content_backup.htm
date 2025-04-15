@@ -19,7 +19,8 @@
 <p>此作業的目的在展示如何利用既有的 Python 可攜系統建立各版本的 Python 可攜環境.</p>
 <!-- 假如檔案小於 5mb, 將 mp4 檔案放入 downloads 目錄後取出 -->
 <div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/cmsimde/static" data-varname="task1" height="630" muted="true" width="1008">
-<source src="./../downloads/task1.mp4" type="video/mp4"/></video></div><h3>list</h3>
+<source src="./../downloads/task1.mp4" type="video/mp4"/></video></div>
+<h3>list</h3>
 <p>列出2b學員作業網站與倉儲連結:</p>
 <p><button id="add1to100">1 add to 100</button></p>
 <!-- 導入 brython 程式庫 -->
@@ -271,11 +272,13 @@ doc["aitetris"].bind("click", aitetris.do)
 <hr/>
 <p>
 <script src="https://unpkg.com/three@0.144.0/build/three.js" type="text/javascript"></script>
-</p><h2>Tasks2</h2>
+</p>
+<h2>Tasks2</h2>
 <h4><span>使用 SSH 協定執行作業倉儲的推送</span></h4>
 <!-- 假如檔案小於 5mb, 將 mp4 檔案放入 downloads 目錄後取出 -->
 <div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/cmsimde/static" data-varname="task2" height="630" muted="true" width="1008">
-<source src="./../downloads/task2.mp4" type="video/mp4"/></video></div><h2>Tasks3</h2>
+<source src="./../downloads/task2.mp4" type="video/mp4"/></video></div>
+<h2>Tasks3</h2>
 <h3>Onshape</h3>
 <div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/cmsimde/static" data-varname="onshape" height="630" muted="true" width="1008">
 <source src="./../downloads/onshape.mp4" type="video/mp4"/></video></div>
@@ -284,7 +287,8 @@ doc["aitetris"].bind("click", aitetris.do)
 <h4><span>Part 1</span></h4>
 <!-- 假如檔案小於 5mb, 將 mp4 檔案放入 downloads 目錄後取出 -->
 <div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/cmsimde/static" data-varname="Webots-1" height="630" muted="true" width="1008">
-<source src="./../downloads/Webots-1.mp4" type="video/mp4"/></video></div><h3>Tutorial 1</h3>
+<source src="./../downloads/Webots-1.mp4" type="video/mp4"/></video></div>
+<h3>Tutorial 1</h3>
 <p><a href="https://cyberbotics.com/doc/guide/tutorial-1-your-first-simulation-in-webots">https://cyberbotics.com/doc/guide/tutorial-1-your-first-simulation-in-webots</a></p>
 <p><strong>教學重點摘要</strong></p>
 <p><span style="color: #000000;"><strong>1.A world is stored in a file having the <code><span style="background-color: #ccffcc;">.wbt</span>,and t</code>he world files must be stored directly in a directory called <span style="background-color: #ccffcc;"><code>worlds.</code></span></strong></span></p>
@@ -309,17 +313,21 @@ doc["aitetris"].bind("click", aitetris.do)
 <p><span style="color: #000000;"><strong>機器人的輪子通常透過速度來控制，而不是透過位置來控制。為了控制車輪馬達的速度，您需要將目標位置設定為無限大，並設定所需的速度。</strong></span></p>
 <p><span style="color: #000000;"><strong>7.Above the code area.Compilation errors are displayed in <span style="background-color: #ccffcc;">red</span> in the console. If there are any, fix them and retry to compile. Then, reload the world.</strong></span></p>
 <p><span style="color: #000000;"><strong>編譯錯誤在控制台中以<span style="background-color: #ccffcc;">紅色</span>顯示。如果有的話，請修復它們並重試編譯。然後，重新加載世界。</strong></span></p>
-<p><span style="color: #000000;"><strong></strong></span></p><h3>Tutorial 2</h3>
+<p><span style="color: #000000;"><strong></strong></span></p>
+<h3>Tutorial 2</h3>
 <p><a href="https://cyberbotics.com/doc/guide/tutorial-1-your-first-simulation-in-webots">https://cyberbotics.com/doc/guide/tutorial-1-your-first-simulation-in-webots</a></p>
 <p><strong>教學重點摘要</strong></p>
 <h5><span style="color: #000000; background-color: #ccffff;">1. 實體節點</span></h5>
 <h5><span></span><span>Webots</span>設計模擬時，一個重要的步驟是將各種實體分解為單獨的剛體。要定義剛體，您必須建立一個實體節點。在這個節點裡面你將設定與剛體的特性相對應的不同的子節點。下圖描繪了剛體及其子節點。實體節點的圖形表示由填滿其清單的形狀節點定義<span>children</span>。碰撞邊界在其欄位中定義<span>boundingObject</span>。圖形表示和碰撞形狀通常但不一定相同。最後，此<span>physics</span>欄位定義物件是屬於動態環境還是靜態環境。所有這些子節點都是可選的，但<span>physics</span>欄位需要<span>boundingObject</span>定義。</h5>
 <p><img alt="" height="367" src="/images/螢幕擷取畫面 2025-04-15 085841.png" width="449"/></p>
-<p><span style="background-color: #ccffff;">2. DEF-USE機制</span></p>
-<p>允許在一個地方定義一個節點並在場景樹的其他地方重複使用該定義。這有助於避免世界文件中相同節點的重複。此外，它還允許使用者同時修改多個物件。</p>
-<p>更改<span>radius</span>第一個<span>Sphere</span>節點的欄位也會修改其<span>boundingObject</span>。</p>
-<p>為了方便起見，該<span>boundingObject</span>欄位也接受<span>Shape</span>節點（而不是直接接受<span>Sphere</span>節點）。也可以在<span>Shape</span>層級使用相同的<span> DEF-USE </span>機制，如下圖所示。目前最大的好處是能夠直接將此形狀用於圖形目的。</p>
-<p><img alt="" height="306" src="/images/DEF-USE 機制應用於固體幾何體的球體節點.png" width="450"/></p><h2>Tasks5</h2>
+<h5><span style="background-color: #ccffff;">2. DEF-USE機制</span></h5>
+<h5>允許在一個地方定義一個節點並在場景樹的其他地方重複使用該定義。這有助於避免世界文件中相同節點的重複。此外，它還允許使用者同時修改多個物件。</h5>
+<h5>更改<span>radius</span>第一個<span>Sphere</span>節點的欄位也會修改其<span>boundingObject</span>。</h5>
+<h5>為了方便起見，該<span>boundingObject</span>欄位也接受<span>Shape</span>節點（而不是直接接受<span>Sphere</span>節點）。也可以在<span>Shape</span>層級使用相同的<span> DEF-USE </span>機制，如下圖所示。目前最大的好處是能夠直接將此形狀用於圖形目的。</h5>
+<p><img alt="" height="306" src="/images/DEF-USE 機制應用於固體幾何體的球體節點.png" width="450"/></p><h3>Tutorial 3</h3>
+<p><a href="https://cyberbotics.com/doc/guide/tutorial-1-your-first-simulation-in-webots">https://cyberbotics.com/doc/guide/tutorial-1-your-first-simulation-in-webots</a></p>
+<p><strong>教學重點摘要</strong></p>
+<h5><span style="background-color: #ccffff;"><strong>1. 燈</strong></span></h5><h2>Tasks5</h2>
 <h2>Tasks6</h2>
 <h1>Homework</h1>
 <p>作業 (30%)</p>
