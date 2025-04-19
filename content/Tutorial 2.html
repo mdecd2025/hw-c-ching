@@ -131,7 +131,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li class='has-children'><a href='Tasks.html'>Tasks</a><ul class='dropdown'><li class='has-children'><a href='Tasks1.html'>Tasks1</a><ul class='dropdown'><li><a href='list.html'>list</a><li><a href='ipV6設定.html'>ipV6設定</a></li></ul><li><a href='Tasks2.html'>Tasks2</a><li class='has-children'><a href='Tasks3.html'>Tasks3</a><ul class='dropdown'><li><a href='Onshape.html'>Onshape</a></li></ul><li class='has-children'><a href='Tasks4.html'>Tasks4</a><ul class='dropdown'><li><a href='Tutorial 1.html'>Tutorial 1</a><li><a href='Tutorial 2.html'>Tutorial 2</a><li><a href='Tutorial 3.html'>Tutorial 3</a><li><a href='Tutorial 4.html'>Tutorial 4</a><li><a href='Tutorial 5.html'>Tutorial 5</a></li></ul><li><a href='Tasks5.html'>Tasks5</a><li><a href='Tasks6.html'>Tasks6</a></li></ul><li class='has-children'><a href='Homework.html'>Homework</a><ul class='dropdown'><li><a href='HW1.html'>HW1</a><li><a href='HW2.html'>HW2</a><li><a href='HW3.html'>HW3</a></li></ul><li><a href='Midterm.html'>Midterm</a><li class='has-children'><a href='Exam.html'>Exam</a><ul class='dropdown'><li><a href='Exam1.html'>Exam1</a><li><a href='Exam2.html'>Exam2</a><li><a href='Exam3.html'>Exam3</a></li></ul><li><a href='Final.html'>Final</a><li><a href='Brython.html'>Brython</a></li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='Tasks.html'>Tasks</a><ul class='dropdown'><li class='has-children'><a href='Tasks1.html'>Tasks1</a><ul class='dropdown'><li><a href='list.html'>list</a><li><a href='ipV6設定.html'>ipV6設定</a></li></ul><li><a href='Tasks2.html'>Tasks2</a><li class='has-children'><a href='Tasks3.html'>Tasks3</a><ul class='dropdown'><li><a href='Onshape.html'>Onshape</a></li></ul><li class='has-children'><a href='Tasks4.html'>Tasks4</a><ul class='dropdown'><li><a href='Tutorial 1.html'>Tutorial 1</a><li><a href='Tutorial 2.html'>Tutorial 2</a><li><a href='Tutorial 3.html'>Tutorial 3</a><li><a href='Tutorial 4.html'>Tutorial 4</a><li><a href='Tutorial 5.html'>Tutorial 5</a><li><a href='Tutorial 6.html'>Tutorial 6</a></li></ul><li><a href='Tasks5.html'>Tasks5</a><li><a href='Tasks6.html'>Tasks6</a></li></ul><li class='has-children'><a href='Homework.html'>Homework</a><ul class='dropdown'><li><a href='HW1.html'>HW1</a><li><a href='HW2.html'>HW2</a><li><a href='HW3.html'>HW3</a></li></ul><li><a href='Midterm.html'>Midterm</a><li class='has-children'><a href='Exam.html'>Exam</a><ul class='dropdown'><li><a href='Exam1.html'>Exam1</a><li><a href='Exam2.html'>Exam2</a><li><a href='Exam3.html'>Exam3</a></li></ul><li><a href='Final.html'>Final</a><li><a href='Brython.html'>Brython</a></li>
                       </ul>
                 </nav>
               </div>
@@ -145,7 +145,7 @@ img.add_border {
     <div id="tipue_search_content">Tutorial 1 << <a href='Tutorial 1.html'>Previous</a> <a href='Tutorial 3.html'>Next</a> >> Tutorial 3<br /><h1>Tutorial 2</h1>
 <p><a href="https://cyberbotics.com/doc/guide/tutorial-2-modification-of-the-environment" title="https://cyberbotics.com/doc/guide/tutorial-2-modification-of-the-environment">https://cyberbotics.com/doc/guide/tutorial-2-modification-of-the-environment</a></p>
 <p></p>
-<h4 class="anchor-header" id="tutorial2modificationoftheenvironment30minutes" name="tutorial-2-modification-of-the-environment-30-minutes"><strong>環境修改教學重點摘要</strong></h4>
+<h4 class="anchor-header" id="tutorial2modificationoftheenvironment30minutes" name="tutorial-2-modification-of-the-environment-30-minutes"><strong>環境修改-教學重點摘要</strong></h4>
 <h5><span style="color: #000000; background-color: #ccffff;">1. 實體節點</span></h5>
 <h5><span></span><span>Webots</span>設計模擬時，一個重要的步驟是將各種實體分解為單獨的剛體。要定義剛體，您必須建立一個實體節點。在這個節點裡面你將設定與剛體的特性相對應的不同的子節點。下圖描繪了剛體及其子節點。實體節點的圖形表示由填滿其清單的形狀節點定義<span>children</span>。碰撞邊界在其欄位中定義<span>boundingObject</span>。圖形表示和碰撞形狀通常但不一定相同。最後，此<span>physics</span>欄位定義物件是屬於動態環境還是靜態環境。所有這些子節點都是可選的，但<span>physics</span>欄位需要<span>boundingObject</span>定義。</h5>
 <p><img alt="" height="367" src="./../images/螢幕擷取畫面 2025-04-15 085841.png" width="449"/></p>
@@ -153,8 +153,7 @@ img.add_border {
 <h5>允許在一個地方定義一個節點並在場景樹的其他地方重複使用該定義。這有助於避免世界文件中相同節點的重複。此外，它還允許使用者同時修改多個物件。</h5>
 <h5>更改<span>radius</span>第一個<span>Sphere</span>節點的欄位也會修改其<span>boundingObject</span>。</h5>
 <h5>為了方便起見，該<span>boundingObject</span>欄位也接受<span>Shape</span>節點（而不是直接接受<span>Sphere</span>節點）。也可以在<span>Shape</span>層級使用相同的<span> DEF-USE </span>機制，如下圖所示。目前最大的好處是能夠直接將此形狀用於圖形目的。</h5>
-<p><img alt="" height="306" src="./../images/DEF-USE 機制應用於固體幾何體的球體節點.png" width="450"/></p>
-<br />Tutorial 1 << <a href='Tutorial 1.html'>Previous</a> <a href='Tutorial 3.html'>Next</a> >> Tutorial 3</div>
+<p><img alt="" height="306" src="./../images/DEF-USE 機制應用於固體幾何體的球體節點.png" width="450"/></p><br />Tutorial 1 << <a href='Tutorial 1.html'>Previous</a> <a href='Tutorial 3.html'>Next</a> >> Tutorial 3</div>
         
     <!-- footer -->
       <div class="container">

@@ -316,7 +316,7 @@ doc["aitetris"].bind("click", aitetris.do)
 <h3>Tutorial 2</h3>
 <p><a href="https://cyberbotics.com/doc/guide/tutorial-2-modification-of-the-environment" title="https://cyberbotics.com/doc/guide/tutorial-2-modification-of-the-environment">https://cyberbotics.com/doc/guide/tutorial-2-modification-of-the-environment</a></p>
 <p></p>
-<h4 class="anchor-header" id="tutorial2modificationoftheenvironment30minutes" name="tutorial-2-modification-of-the-environment-30-minutes"><strong>環境修改教學重點摘要</strong></h4>
+<h4 class="anchor-header" id="tutorial2modificationoftheenvironment30minutes" name="tutorial-2-modification-of-the-environment-30-minutes"><strong>環境修改-教學重點摘要</strong></h4>
 <h5><span style="color: #000000; background-color: #ccffff;">1. 實體節點</span></h5>
 <h5><span></span><span>Webots</span>設計模擬時，一個重要的步驟是將各種實體分解為單獨的剛體。要定義剛體，您必須建立一個實體節點。在這個節點裡面你將設定與剛體的特性相對應的不同的子節點。下圖描繪了剛體及其子節點。實體節點的圖形表示由填滿其清單的形狀節點定義<span>children</span>。碰撞邊界在其欄位中定義<span>boundingObject</span>。圖形表示和碰撞形狀通常但不一定相同。最後，此<span>physics</span>欄位定義物件是屬於動態環境還是靜態環境。所有這些子節點都是可選的，但<span>physics</span>欄位需要<span>boundingObject</span>定義。</h5>
 <p><img alt="" height="367" src="/images/螢幕擷取畫面 2025-04-15 085841.png" width="449"/></p>
@@ -324,10 +324,9 @@ doc["aitetris"].bind("click", aitetris.do)
 <h5>允許在一個地方定義一個節點並在場景樹的其他地方重複使用該定義。這有助於避免世界文件中相同節點的重複。此外，它還允許使用者同時修改多個物件。</h5>
 <h5>更改<span>radius</span>第一個<span>Sphere</span>節點的欄位也會修改其<span>boundingObject</span>。</h5>
 <h5>為了方便起見，該<span>boundingObject</span>欄位也接受<span>Shape</span>節點（而不是直接接受<span>Sphere</span>節點）。也可以在<span>Shape</span>層級使用相同的<span> DEF-USE </span>機制，如下圖所示。目前最大的好處是能夠直接將此形狀用於圖形目的。</h5>
-<p><img alt="" height="306" src="/images/DEF-USE 機制應用於固體幾何體的球體節點.png" width="450"/></p>
-<h3>Tutorial 3</h3>
+<p><img alt="" height="306" src="/images/DEF-USE 機制應用於固體幾何體的球體節點.png" width="450"/></p><h3>Tutorial 3</h3>
 <p><a href="https://cyberbotics.com/doc/guide/tutorial-3-appearance">https://cyberbotics.com/doc/guide/tutorial-3-appearance</a></p>
-<h4 class="anchor-header" id="tutorial3appearance20minutes" name="tutorial-3-appearance-20-minutes"><strong>外觀教學重點摘要</strong></h4>
+<h4 class="anchor-header" id="tutorial3appearance20minutes" name="tutorial-3-appearance-20-minutes"><strong>外觀-教學重點摘要</strong></h4>
 <h5><span style="background-color: #ccffff;"><strong>1. 燈</strong></span></h5>
 <h5>照明由<span style="background-color: #ffff99;">光源節點</span>和<span style="background-color: #ffff99;">背景</span>決定。有三種類型的光源節點：<span>DirectionalLight</span>，<span>PointLight</span>和<span>SpotLight</span>。<span> DirectionalLight</span>模擬無限遠的光（例如：太陽），<span>PointLight</span>模擬從單點發出的光（例如：燈泡），<span>SpotLight</span>模擬錐形光（例如：手電筒）。</h5>
 <p><img alt="" height="131" src="/images/燈.png" width="586"/></p>
@@ -338,20 +337,18 @@ doc["aitetris"].bind("click", aitetris.do)
 <h5>2.在<span>PBRAppearance</span>節點的欄位中新增一個<span>ImageTexture</span>節點</h5>
 <h5>3.使用按鈕將項目新增至<span>ImageTexture</span>的欄位</h5>
 <h5>4.然後使用“選擇”按鈕設定新新增項目的值</h5>
-<h5>5.按照路徑找到保存紋理的位置並選擇</h5>
-<h3>Tutorial 4</h3>
+<h5>5.按照路徑找到保存紋理的位置並選擇</h5><h3>Tutorial 4</h3>
 <p><a href="https://cyberbotics.com/doc/guide/tutorial-4-more-about-controllers">https://cyberbotics.com/doc/guide/tutorial-4-more-about-controllers</a></p>
-<h4 class="anchor-header" id="tutorial4moreaboutcontrollers30minutes" name="tutorial-4-more-about-controllers-30-minutes"><strong>關於控制器教學重點摘要</strong></h4>
+<h4 class="anchor-header" id="tutorial4moreaboutcontrollers30minutes" name="tutorial-4-more-about-controllers-30-minutes"><strong>關於控制器-教學重點摘要</strong></h4>
 <h5><span style="background-color: #ccffff;">建立新世界與控制器步驟:</span></h5>
 <h5>1. 將先前的世界儲存為 collision_avoidance.wbt。</h5>
 <h5>2. 從「檔案」菜單中選擇「新建」&gt;「新建機器人控制器」，並命名為 epuck_avoid_collision。</h5>
-<h5>3. 在 E-puck 節點的 controller 欄位中，將控制器設定為新建立的 epuck_avoid_collision。</h5>
-<h3>Tutorial 5</h3>
+<h5>3. 在 E-puck 節點的 controller 欄位中，將控制器設定為新建立的 epuck_avoid_collision。</h5><h3>Tutorial 5</h3>
 <p><a href="https://cyberbotics.com/doc/guide/tutorial-5-compound-solid-and-physics-attributes">https://cyberbotics.com/doc/guide/tutorial-5-compound-solid-and-physics-attributes</a></p>
-<h4 class="anchor-header" name="tutorial-5-compound-solid-and-physics-attributes-15-minutes"><strong>複合固體和物理屬性教學重點摘要</strong></h4>
+<h4 class="anchor-header" name="tutorial-5-compound-solid-and-physics-attributes-15-minutes"><strong>複合固體和物理屬性-教學重點摘要</strong></h4>
 <h5 class="anchor-header" id="compoundsolid" name="compound-solid"><span style="background-color: #ccffff;">1. 複合固體</span></h5>
 <h5>透過<span style="background-color: #ffff99;">聚合形狀節點</span>，可以建立比我們以前見過的更複雜的實體節點。實體的物理屬性和圖形屬性都可以由多個形狀節點組成，每個Shape節點都可以放置在Pose節點中，以改變其相對位置和方向。 群組節點也可用於對多個子節點進行分組。</h5>
-<p>                                         <img alt="" height="397" src="/images/由多個變換幾何構成的複合實體的子節點的表示.png" width="230"/></p>
+<h5> <img alt="" height="397" src="/images/由多個變換幾何構成的複合實體的子節點的表示.png" width="230"/></h5>
 <h5><strong><span style="background-color: #ccffff;">2. 物理屬性</span></strong></h5>
 <h5>我們可以透過以下方式設定 Solid 節點的物理屬性：</h5>
 <h5><span style="background-color: #ffff99;">質量與密度只能設定其中一個，另一個需設為 -1</span></h5>
@@ -377,7 +374,44 @@ doc["aitetris"].bind("click", aitetris.do)
 <h5>1. <span style="background-color: #ffff99;">basicTimeStep</span>：設定物理步驟的時間間隔（單位：毫秒）。</h5>
 <h5><span style="background-color: #ffff99;">建議值：8 至 16 毫秒</span></h5>
 <h5>2. <span style="background-color: #ffff99;">ERP（Error Reduction Parameter）</span>：設定誤差修正參數。</h5>
-<h5>3. <span style="background-color: #ffff99;">CFM（Constraint Force Mixing）</span>：設定約束力混合參數。</h5><h2>Tasks5</h2>
+<h5>3. <span style="background-color: #ffff99;">CFM（Constraint Force Mixing）</span>：設定約束力混合參數。</h5><h3>Tutorial 6</h3>
+<p><a href="https://cyberbotics.com/doc/guide/tutorial-6-4-wheels-robot">https://cyberbotics.com/doc/guide/tutorial-6-4-wheels-robot</a></p>
+<h4 class="anchor-header" name="tutorial-6-4-wheeled-robot-60-minutes"><strong>四輪機器人-</strong><strong>教學重點摘要<span style="color: #ff0000;">***</span></strong></h4>
+<p><strong><span style="color: #ff0000;"><img alt="" height="299" src="/images/四輪機器人的高階表示.png" width="320"/></span></strong></p>
+<h5><span style="background-color: #ccffff;">1. 建立機器人結構</span><br/>機器人由五個主要的 <span style="background-color: #ffff99;">Solid</span> 節點組成：</h5>
+<h5>1. <span style="background-color: #ffff99;">Robot</span>（機器人本體）：作為根節點，包含車身和四個輪子。</h5>
+<h5>2.<span style="background-color: #ffff99;">Wheel1</span> 至 <span style="background-color: #ffff99;">Wheel4</span>（四個輪子）：每個輪子由 <span style="background-color: #ffff99;">HingeJoint</span> 節點連接，並包含 <span style="background-color: #ffff99;">RotationalMotor</span> 來驅動。</h5>
+<h5>每個輪子使用以下結構：</h5>
+<ul>
+<li>
+<h5><span style="background-color: #ffff99;">HingeJoint</span>：定義輪子與車身的旋轉關聯。</h5>
+</li>
+<li>
+<h5><span style="background-color: #ffff99;">Solid</span>：輪子的實體節點。</h5>
+</li>
+<li>
+<h5><span style="background-color: #ffff99;">Shape</span>：輪子的外觀，使用 <span style="background-color: #ffff99;">Cylinder</span> 幾何形狀<span style="color: #ff0000;"></span>。</h5>
+</li>
+<li>
+<h5><span style="background-color: #ffff99;">Physics</span>：輪子的物理屬性。</h5>
+</li>
+</ul>
+<h5><span style="background-color: #ccffff;">2. 設定輪子參數</span><br/>每個 <span style="background-color: #ffff99;">HingeJoint</span> 節點需要設定以下參數：</h5>
+<ul>
+<li>
+<h5><span style="background-color: #ffff99;">jointParameters</span>：設定旋轉軸的位置和方向。</h5>
+</li>
+<li>
+<h5><span style="background-color: #ffff99;">device</span>：包含 <span style="background-color: #ffff99;">RotationalMotor</span> 節點，用於控制輪子的旋轉。</h5>
+</li>
+<li>
+<h5><span style="background-color: #ffff99;">endPoint</span>：指向輪子的 <span style="background-color: #ffff99;">Solid</span> 節點。</h5>
+</li>
+</ul>
+<p><img alt="" height="246" src="/images/四輪機器人的低階表示.png" width="542"/></p>
+<h5><span style="background-color: #ccffff;">3. 感應器</span></h5>
+<h5><span style="background-color: #ccffff;">4. 控制器</span></h5>
+<h5><span style="background-color: #ccffff;">5. 控制器程式碼</span></h5><h2>Tasks5</h2>
 <h2>Tasks6</h2>
 <h1>Homework</h1>
 <p>作業 (30%)</p>

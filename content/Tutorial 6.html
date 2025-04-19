@@ -2,7 +2,7 @@
         <head>
         <title>cd_hw</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -142,20 +142,44 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Midterm << <a href='Midterm.html'>Previous</a> <a href='Exam1.html'>Next</a> >> Exam1<br /><h1>Exam</h1>
-<p>Exam1 (10%): 建立 Webots 基本物件模擬場景</p>
-<p style="padding-left: 30px;">各學員利用 Webots R2025a 套件中的 Shape 物件, 隨堂建立指定的機電系統模擬場景, 並利用 Python 程式進行互動控制.</p>
-<p>Exam2 (10%): 利用 CAD 零組件建立模擬場景 </p>
-<p style="padding-left: 30px;">各學員利用 CAD (Solvespace 與 NX2312), 隨堂建立指定的系統模型零組件後, 導入 Webots R2025a 後, 建立機電系統模擬場景, 並利用 Python 程式進行互動控制.</p>
-<p>Exam3 (20%): Webots 機電模擬場景的協同設計</p>
-<p style="padding-left: 30px;">各分組利用 CAD (Solvespace 與 NX2312), 隨堂建立指定的系統模型零組件後, 導入 Webots R2025a 後, 建立機電系統模擬場景, 並利用 Python 程式進行互動控制. 過程中各學員必須採同步協同模式, 維護從 Github Classroom 取得的分組協同倉儲以及網站.</p>
-<p style="padding-left: 30px;">協同分組方式:</p>
-<ol>
-<li>分配學員負責利用 Solvespace 建立系統零組件, 過程中必須將所建構之零組件檔案與繪圖過程影片上傳至分組網頁.</li>
-<li>分配學員負責利用 NX2312 建立系統零組件, 過程中必須將所建構之零組件檔案與繪圖過程影片上傳至分組網頁.</li>
-<li>分配學員負責利用 Webots 建立機電系統模擬場景, 並利用 Python 程式進行控制, 過程中必須將建構過程拍成帶有說明字幕的影片上傳至分組網頁.</li>
-</ol>
-<br />Midterm << <a href='Midterm.html'>Previous</a> <a href='Exam1.html'>Next</a> >> Exam1</div>
+    <div id="tipue_search_content">Tutorial 5 << <a href='Tutorial 5.html'>Previous</a> <a href='Tasks5.html'>Next</a> >> Tasks5<br /><h1>Tutorial 6</h1>
+<p><a href="https://cyberbotics.com/doc/guide/tutorial-6-4-wheels-robot">https://cyberbotics.com/doc/guide/tutorial-6-4-wheels-robot</a></p>
+<h4 class="anchor-header" name="tutorial-6-4-wheeled-robot-60-minutes"><strong><span style="color: #ff0000;">***</span>四輪機器人-</strong><strong>教學重點摘要<span style="color: #ff0000;">***</span></strong></h4>
+<p><strong><span style="color: #ff0000;"><img alt="" height="299" src="./../images/四輪機器人的高階表示.png" width="320"/></span></strong></p>
+<h5><span style="background-color: #ccffff;">1. 建立機器人結構</span><br/>機器人由五個主要的 <span style="background-color: #ffff99;">Solid</span> 節點組成：</h5>
+<h5>1. <span style="background-color: #ffff99;">Robot</span>（機器人本體）：作為根節點，包含車身和四個輪子。</h5>
+<h5>2.<span style="background-color: #ffff99;">Wheel1</span> 至 <span style="background-color: #ffff99;">Wheel4</span>（四個輪子）：每個輪子由 <span style="background-color: #ffff99;">HingeJoint</span> 節點連接，並包含 <span style="background-color: #ffff99;">RotationalMotor</span> 來驅動。</h5>
+<h5>每個輪子使用以下結構：</h5>
+<ul>
+<li>
+<h5><span style="background-color: #ffff99;">HingeJoint</span>：定義輪子與車身的旋轉關聯。</h5>
+</li>
+<li>
+<h5><span style="background-color: #ffff99;">Solid</span>：輪子的實體節點。</h5>
+</li>
+<li>
+<h5><span style="background-color: #ffff99;">Shape</span>：輪子的外觀，使用 <span style="background-color: #ffff99;">Cylinder</span> 幾何形狀<span style="color: #ff0000;"></span>。</h5>
+</li>
+<li>
+<h5><span style="background-color: #ffff99;">Physics</span>：輪子的物理屬性。</h5>
+</li>
+</ul>
+<h5><span style="background-color: #ccffff;">2. 設定輪子參數</span><br/>每個 <span style="background-color: #ffff99;">HingeJoint</span> 節點需要設定以下參數：</h5>
+<ul>
+<li>
+<h5><span style="background-color: #ffff99;">jointParameters</span>：設定旋轉軸的位置和方向。</h5>
+</li>
+<li>
+<h5><span style="background-color: #ffff99;">device</span>：包含 <span style="background-color: #ffff99;">RotationalMotor</span> 節點，用於控制輪子的旋轉。</h5>
+</li>
+<li>
+<h5><span style="background-color: #ffff99;">endPoint</span>：指向輪子的 <span style="background-color: #ffff99;">Solid</span> 節點。</h5>
+</li>
+</ul>
+<p><img alt="" height="246" src="./../images/四輪機器人的低階表示.png" width="542"/></p>
+<h5><span style="background-color: #ccffff;">3. 感應器</span></h5>
+<h5><span style="background-color: #ccffff;">4. 控制器</span></h5>
+<h5><span style="background-color: #ccffff;">5. 控制器程式碼</span></h5><br />Tutorial 5 << <a href='Tutorial 5.html'>Previous</a> <a href='Tasks5.html'>Next</a> >> Tasks5</div>
         
     <!-- footer -->
       <div class="container">
