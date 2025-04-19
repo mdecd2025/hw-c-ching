@@ -417,7 +417,27 @@ doc["aitetris"].bind("click", aitetris.do)
 <h3>Tutorial 7</h3>
 <p><a href="https://cyberbotics.com/doc/guide/tutorial-7-your-first-proto">https://cyberbotics.com/doc/guide/tutorial-7-your-first-proto</a></p>
 <h4 class="anchor-header" name="tutorial-7-your-first-proto-20-minutes"><span>第一個 PROTO-</span><strong>教學重點摘要</strong></h4>
-<h3>Tutorial 8</h3>
+<h5 class="anchor-header" id="copytherobotdefinition" name="copy-the-robot-definition"><span style="background-color: #ffff99;">複製機器人定義:將world檔案中對機器人的定義移至 PROTO 檔案中，且允許使用此機器人，而無需完全複製和貼上其定義</span></h5>
+<h5 class="anchor-header" name="tutorial-7-your-first-proto-20-minutes"><span style="background-color: #ccffff;"><strong>1. 建立 PROTO 檔案</strong></span></h5>
+<h5>在專案的<span style="background-color: #ccffcc;"> protos</span> 資料夾中建立一個名為 <span style="background-color: #ccffcc;">FourWheelsRobot.proto</span> 的新檔案。</h5>
+<h5>在檔案中加入以下基本結構：</h5>
+<h5>VRML_SIM R2023a utf8<br/>PROTO FourWheelsRobot [<br/> <span style="color: #ff0000;"># 在此定義可調整的欄位</span><br/>]<br/>{<br/> <span style="color: #ff0000;"># 在此放置機器人結構</span><br/>}</h5>
+<h5>將先前在 <span style="background-color: #ccffcc;"><code data-end="25" data-start="5">4_wheels_robot.wbt</code></span> 中建立的<span style="background-color: #ccffcc;"> <code data-end="38" data-start="31">Robot</code> </span>節點（包含其子節點）複製並貼上至 <span style="background-color: #ccffcc;"><code data-end="63" data-start="56">PROTO</code> 的 <code data-end="70" data-start="66">{}</code> 區塊中</span></h5>
+<h5 class="anchor-header" id="usetheprotonode" name="use-the-proto-node"><span style="background-color: #ccffff;">2. 使用 PROTO 節點</span></h5>
+<p><span style="background-color: #ccffff;"><img alt="" height="233" src="/images/PROTO 現在顯示在「新增節點」視窗中.png" width="450"/></span></p>
+<h5><span style="background-color: #ccffff;">3. 新增字段</span></h5>
+<ul>
+<li>
+<h5>在 <span style="background-color: #ccffcc;">PROTO</span> 節點中介面中"<span style="color: #ff0000;"><code><span color="#ff0000" style="color: #ff0000;">[</span><span face="Verdana, Arial, Helvetica, sans-serif" style="font-family: Verdana, Arial, Helvetica, sans-serif;">  </span></code></span><span style="color: #ff0000;"><code>]</code></span><code>"</code><code>之間的部分</code>新增欄位並將它們與內部欄位連結起來</h5>
+</li>
+<li>
+<h5>要連結字段，應該使用<span style="background-color: #ccffcc;"> IS</span> 關鍵字，只需將<span style="background-color: #ccffcc;">Robot</span>節點的<span style="background-color: #ccffcc;">translation x y z</span>和字段替換為：<span style="background-color: #ccffcc;">rotation x y z angle</span><span style="background-color: #ccffcc;"></span></h5>
+</li>
+<li>
+<h5>Robot節點的Physicsmass節點的字段由以下方式設定：</h5>
+<pre><span style="background-color: #ccffcc;"><code>mass IS bodyMass</code></span></pre>
+</li>
+</ul><h3>Tutorial 8</h3>
 <p><a href="https://cyberbotics.com/doc/guide/tutorial-8-the-supervisor">https://cyberbotics.com/doc/guide/tutorial-8-the-supervisor</a></p>
 <h4 class="anchor-header" name="tutorial-8-the-supervisor-30-minutes">The Supervisor<span>-</span><strong>教學重點摘要</strong></h4>
 <h2>Tasks5</h2>
