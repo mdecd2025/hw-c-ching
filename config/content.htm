@@ -324,7 +324,8 @@ doc["aitetris"].bind("click", aitetris.do)
 <h5>允許在一個地方定義一個節點並在場景樹的其他地方重複使用該定義。這有助於避免世界文件中相同節點的重複。此外，它還允許使用者同時修改多個物件。</h5>
 <h5>更改<span>radius</span>第一個<span>Sphere</span>節點的欄位也會修改其<span>boundingObject</span>。</h5>
 <h5>為了方便起見，該<span>boundingObject</span>欄位也接受<span>Shape</span>節點（而不是直接接受<span>Sphere</span>節點）。也可以在<span>Shape</span>層級使用相同的<span> DEF-USE </span>機制，如下圖所示。目前最大的好處是能夠直接將此形狀用於圖形目的。</h5>
-<p><img alt="" height="306" src="/images/DEF-USE 機制應用於固體幾何體的球體節點.png" width="450"/></p><h3>Tutorial 3</h3>
+<p><img alt="" height="306" src="/images/DEF-USE 機制應用於固體幾何體的球體節點.png" width="450"/></p>
+<h3>Tutorial 3</h3>
 <p><a href="https://cyberbotics.com/doc/guide/tutorial-3-appearance">https://cyberbotics.com/doc/guide/tutorial-3-appearance</a></p>
 <h4 class="anchor-header" id="tutorial3appearance20minutes" name="tutorial-3-appearance-20-minutes"><strong>外觀教學重點摘要</strong></h4>
 <h5><span style="background-color: #ccffff;"><strong>1. 燈</strong></span></h5>
@@ -337,13 +338,46 @@ doc["aitetris"].bind("click", aitetris.do)
 <h5>2.在<span>PBRAppearance</span>節點的欄位中新增一個<span>ImageTexture</span>節點</h5>
 <h5>3.使用按鈕將項目新增至<span>ImageTexture</span>的欄位</h5>
 <h5>4.然後使用“選擇”按鈕設定新新增項目的值</h5>
-<h5>5.按照路徑找到保存紋理的位置並選擇</h5><h3>Tutorial 4</h3>
+<h5>5.按照路徑找到保存紋理的位置並選擇</h5>
+<h3>Tutorial 4</h3>
 <p><a href="https://cyberbotics.com/doc/guide/tutorial-4-more-about-controllers">https://cyberbotics.com/doc/guide/tutorial-4-more-about-controllers</a></p>
 <h4 class="anchor-header" id="tutorial4moreaboutcontrollers30minutes" name="tutorial-4-more-about-controllers-30-minutes"><strong>關於控制器教學重點摘要</strong></h4>
 <h5><span style="background-color: #ccffff;">建立新世界與控制器步驟:</span></h5>
 <h5>1. 將先前的世界儲存為 collision_avoidance.wbt。</h5>
 <h5>2. 從「檔案」菜單中選擇「新建」&gt;「新建機器人控制器」，並命名為 epuck_avoid_collision。</h5>
-<h5>3. 在 E-puck 節點的 controller 欄位中，將控制器設定為新建立的 epuck_avoid_collision。</h5><h2>Tasks5</h2>
+<h5>3. 在 E-puck 節點的 controller 欄位中，將控制器設定為新建立的 epuck_avoid_collision。</h5>
+<h3>Tutorial 5</h3>
+<p><a href="https://cyberbotics.com/doc/guide/tutorial-5-compound-solid-and-physics-attributes">https://cyberbotics.com/doc/guide/tutorial-5-compound-solid-and-physics-attributes</a></p>
+<h4 class="anchor-header" name="tutorial-5-compound-solid-and-physics-attributes-15-minutes"><strong>複合固體和物理屬性教學重點摘要</strong></h4>
+<h5 class="anchor-header" id="compoundsolid" name="compound-solid"><span style="background-color: #ccffff;">1. 複合固體</span></h5>
+<h5>透過<span style="background-color: #ffff99;">聚合形狀節點</span>，可以建立比我們以前見過的更複雜的實體節點。實體的物理屬性和圖形屬性都可以由多個形狀節點組成，每個Shape節點都可以放置在Pose節點中，以改變其相對位置和方向。 群組節點也可用於對多個子節點進行分組。</h5>
+<p>                                         <img alt="" height="397" src="/images/由多個變換幾何構成的複合實體的子節點的表示.png" width="230"/></p>
+<h5><strong><span style="background-color: #ccffff;">2. 物理屬性</span></strong></h5>
+<h5>我們可以透過以下方式設定 Solid 節點的物理屬性：</h5>
+<h5><span style="background-color: #ffff99;">質量與密度只能設定其中一個，另一個需設為 -1</span></h5>
+<h5>1. <span style="background-color: #ffff99;">mass</span>：設定固體的總質量（單位：公斤）<br/>2. <span style="background-color: #ffff99;">density</span>：設定固體的密度（單位：公斤/立方公尺），與體積相乘得到總質量。</h5>
+<h5>預設情況下，實體節點的質心設定在其原點（由實體的平移場定義）。可以使用物理節點的欄位<span style="background-color: #ffff99;">(centerOfMass)</span>來修改質心。質心是相對於固體的原點指定的。</h5>
+<h5><span style="background-color: #ccffff;">3. 設定旋轉</span></h5>
+<h5>透過 <span style="background-color: #ffff99;">Pose</span> 節點的 <span style="background-color: #ffff99;">rotation</span> 欄位，我們可以設定物體的旋轉:</h5>
+<h5>旋轉格式：使用歐拉軸與角度表示法。</h5>
+<h5>前三個值：定義旋轉軸的單位向量。</h5>
+<h5>第四個值：定義繞該軸的旋轉角度（單位：弧度）。</h5>
+<h5><span style="background-color: #ccffff;">4.選擇邊界物件</span></h5>
+<h5><span style="background-color: #ffff99;">Sphere</span>（球體）：效率最高。</h5>
+<h5><span style="background-color: #ffff99;">Box</span>（方塊）：效率較高。</h5>
+<h5><span style="background-color: #ffff99;">Capsule</span>（膠囊體）：效率中等。</h5>
+<h5><span style="background-color: #ffff99;">Cylinder</span>（圓柱體）：效率較低。</h5>
+<h5>不建議使用<span style="background-color: #ffff99;"> IndexedFaceSet</span>，因為其效率較低，且可能存在一些問題</h5>
+<h5><span style="background-color: #ccffff;">5. 設定接觸屬性</span></h5>
+<h5>當兩個固體發生碰撞時，可以使用 <span style="background-color: #ffff99;">ContactProperties</span> 節點來設定接觸行為:</h5>
+<h5>1.<span style="background-color: #ffff99;"> 設定材料類別</span>：透過 <span style="background-color: #ffff99;">contactMaterial</span> 欄位設定固體的材料類別。</h5>
+<h5>2.<span style="background-color: #ffff99;"> 設定摩擦力</span>：在 <span style="background-color: #ffff99;">ContactProperties</span> 節點中設定 <span style="background-color: #ffff99;">coulombFriction</span> 欄位來調整摩擦力。</h5>
+<h5><span style="background-color: #ccffff;">6. 設定物理參數</span></h5>
+<h5>在 <span style="background-color: #ffff99;">WorldInfo</span> 節點中，可以設定以下物理參數：</h5>
+<h5>1. <span style="background-color: #ffff99;">basicTimeStep</span>：設定物理步驟的時間間隔（單位：毫秒）。</h5>
+<h5><span style="background-color: #ffff99;">建議值：8 至 16 毫秒</span></h5>
+<h5>2. <span style="background-color: #ffff99;">ERP（Error Reduction Parameter）</span>：設定誤差修正參數。</h5>
+<h5>3. <span style="background-color: #ffff99;">CFM（Constraint Force Mixing）</span>：設定約束力混合參數。</h5><h2>Tasks5</h2>
 <h2>Tasks6</h2>
 <h1>Homework</h1>
 <p>作業 (30%)</p>
