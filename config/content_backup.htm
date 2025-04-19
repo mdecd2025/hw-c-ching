@@ -286,7 +286,8 @@ doc["aitetris"].bind("click", aitetris.do)
 <h4><span>webots四連桿練習</span></h4>
 <!-- 假如檔案小於 5mb, 將 mp4 檔案放入 downloads 目錄後取出 -->
 <div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/cmsimde/static" data-varname="Webots-1" height="630" muted="true" width="1008">
-<source src="./../downloads/Webots-1.mp4" type="video/mp4"/></video></div><h3>Tutorial 1</h3>
+<source src="./../downloads/Webots-1.mp4" type="video/mp4"/></video></div>
+<h3>Tutorial 1</h3>
 <p><a href="https://cyberbotics.com/doc/guide/tutorial-1-your-first-simulation-in-webots">https://cyberbotics.com/doc/guide/tutorial-1-your-first-simulation-in-webots</a></p>
 <p><strong>教學重點摘要</strong></p>
 <p><span style="color: #000000;"><strong>1.A world is stored in a file having the <code><span style="background-color: #ccffcc;">.wbt</span>,and t</code>he world files must be stored directly in a directory called <span style="background-color: #ccffcc;"><code>worlds.</code></span></strong></span></p>
@@ -313,8 +314,9 @@ doc["aitetris"].bind("click", aitetris.do)
 <p><span style="color: #000000;"><strong>編譯錯誤在控制台中以<span style="background-color: #ccffcc;">紅色</span>顯示。如果有的話，請修復它們並重試編譯。然後，重新加載世界。</strong></span></p>
 <p><span style="color: #000000;"><strong></strong></span></p>
 <h3>Tutorial 2</h3>
-<p><a href="https://cyberbotics.com/doc/guide/tutorial-1-your-first-simulation-in-webots">https://cyberbotics.com/doc/guide/tutorial-1-your-first-simulation-in-webots</a></p>
-<p><strong>教學重點摘要</strong></p>
+<p><a href="https://cyberbotics.com/doc/guide/tutorial-2-modification-of-the-environment" title="https://cyberbotics.com/doc/guide/tutorial-2-modification-of-the-environment">https://cyberbotics.com/doc/guide/tutorial-2-modification-of-the-environment</a></p>
+<p></p>
+<h4 class="anchor-header" id="tutorial2modificationoftheenvironment30minutes" name="tutorial-2-modification-of-the-environment-30-minutes"><strong>環境修改教學重點摘要</strong></h4>
 <h5><span style="color: #000000; background-color: #ccffff;">1. 實體節點</span></h5>
 <h5><span></span><span>Webots</span>設計模擬時，一個重要的步驟是將各種實體分解為單獨的剛體。要定義剛體，您必須建立一個實體節點。在這個節點裡面你將設定與剛體的特性相對應的不同的子節點。下圖描繪了剛體及其子節點。實體節點的圖形表示由填滿其清單的形狀節點定義<span>children</span>。碰撞邊界在其欄位中定義<span>boundingObject</span>。圖形表示和碰撞形狀通常但不一定相同。最後，此<span>physics</span>欄位定義物件是屬於動態環境還是靜態環境。所有這些子節點都是可選的，但<span>physics</span>欄位需要<span>boundingObject</span>定義。</h5>
 <p><img alt="" height="367" src="/images/螢幕擷取畫面 2025-04-15 085841.png" width="449"/></p>
@@ -323,8 +325,8 @@ doc["aitetris"].bind("click", aitetris.do)
 <h5>更改<span>radius</span>第一個<span>Sphere</span>節點的欄位也會修改其<span>boundingObject</span>。</h5>
 <h5>為了方便起見，該<span>boundingObject</span>欄位也接受<span>Shape</span>節點（而不是直接接受<span>Sphere</span>節點）。也可以在<span>Shape</span>層級使用相同的<span> DEF-USE </span>機制，如下圖所示。目前最大的好處是能夠直接將此形狀用於圖形目的。</h5>
 <p><img alt="" height="306" src="/images/DEF-USE 機制應用於固體幾何體的球體節點.png" width="450"/></p><h3>Tutorial 3</h3>
-<p><a href="https://cyberbotics.com/doc/guide/tutorial-1-your-first-simulation-in-webots">https://cyberbotics.com/doc/guide/tutorial-1-your-first-simulation-in-webots</a></p>
-<p><strong>教學重點摘要</strong></p>
+<p><a href="https://cyberbotics.com/doc/guide/tutorial-3-appearance">https://cyberbotics.com/doc/guide/tutorial-3-appearance</a></p>
+<h4 class="anchor-header" id="tutorial3appearance20minutes" name="tutorial-3-appearance-20-minutes"><strong>外觀教學重點摘要</strong></h4>
 <h5><span style="background-color: #ccffff;"><strong>1. 燈</strong></span></h5>
 <h5>照明由<span style="background-color: #ffff99;">光源節點</span>和<span style="background-color: #ffff99;">背景</span>決定。有三種類型的光源節點：<span>DirectionalLight</span>，<span>PointLight</span>和<span>SpotLight</span>。<span> DirectionalLight</span>模擬無限遠的光（例如：太陽），<span>PointLight</span>模擬從單點發出的光（例如：燈泡），<span>SpotLight</span>模擬錐形光（例如：手電筒）。</h5>
 <p><img alt="" height="131" src="/images/燈.png" width="586"/></p>
@@ -335,7 +337,13 @@ doc["aitetris"].bind("click", aitetris.do)
 <h5>2.在<span>PBRAppearance</span>節點的欄位中新增一個<span>ImageTexture</span>節點</h5>
 <h5>3.使用按鈕將項目新增至<span>ImageTexture</span>的欄位</h5>
 <h5>4.然後使用“選擇”按鈕設定新新增項目的值</h5>
-<h5>5.按照路徑找到保存紋理的位置並選擇</h5><h2>Tasks5</h2>
+<h5>5.按照路徑找到保存紋理的位置並選擇</h5><h3>Tutorial 4</h3>
+<p><a href="https://cyberbotics.com/doc/guide/tutorial-4-more-about-controllers">https://cyberbotics.com/doc/guide/tutorial-4-more-about-controllers</a></p>
+<p><strong>教學重點摘要</strong></p>
+<h5><span style="background-color: #ccffff;">建立新世界與控制器步驟:</span></h5>
+<h5>1. 將先前的世界儲存為 collision_avoidance.wbt。</h5>
+<h5>2. 從「檔案」菜單中選擇「新建」&gt;「新建機器人控制器」，並命名為 epuck_avoid_collision。</h5>
+<h5>3. 在 E-puck 節點的 controller 欄位中，將控制器設定為新建立的 epuck_avoid_collision。</h5><h2>Tasks5</h2>
 <h2>Tasks6</h2>
 <h1>Homework</h1>
 <p>作業 (30%)</p>
