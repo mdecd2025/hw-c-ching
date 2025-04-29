@@ -338,7 +338,7 @@ def run1():
     try:
         url = doc.query["src"]
     except:
-        url = "https://gist.githubusercontent.com/c-ching/8d023b583c7d5923af1db7bca9382f27/raw/47d57b7d600361ca65c57bfad0417dd3dbac1ef1/gistfile1.txt"
+        url = "https://gist.githubusercontent.com/c-ching/9d561234431fe1313b7d405f171afda4/raw/912d3ac5b0c9d2446e0aef79e85d6cc14fc34ced/gistfile1.txt"
     prog = open(url).read()
 
     # 將程式載入編輯區
@@ -373,7 +373,7 @@ def clear_bd1(ev):
 # 利用 ace 中的 Editor 建立 Ace2 物件, 其中的輸入變數分別對應到頁面中的編輯區物件
 Ace2 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
 
-add1to100_url = "https://gist.githubusercontent.com/c-ching/8d023b583c7d5923af1db7bca9382f27/raw/47d57b7d600361ca65c57bfad0417dd3dbac1ef1/gistfile1.txt"
+add1to100_url = "https://gist.githubusercontent.com/c-ching/9d561234431fe1313b7d405f171afda4/raw/912d3ac5b0c9d2446e0aef79e85d6cc14fc34ced/gistfile1.txt"
 
 # 從 gist 取得程式碼
 add_src = open(add1to100_url).read()
@@ -404,8 +404,7 @@ doc["add1to100"].bind('click', add)
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
 <p><!-- Brython 程式執行的結果, 都以 brython_div1 作為切入位置 --></p>
 <div id="brython_div1"></div>
-<!-- editor1 結束 --><hr/><!-- ########################################## -->
-<p># --&gt;</p><h2>Tasks3</h2>
+<!-- editor1 結束 --><hr/><!-- ########################################## --><h2>Tasks3</h2>
 <h3>Onshape</h3>
 <div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/cmsimde/static" data-varname="onshape" height="630" muted="true" width="1008">
 <source src="./../downloads/onshape.mp4" type="video/mp4"/></video></div>
@@ -578,7 +577,13 @@ doc["add1to100"].bind('click', add)
 <h5>5.為 <span style="background-color: #ccffcc;">supervisor</span> 機器人創建一個新的控制器 <span style="background-color: #ccffcc;">supervisor_controller.py</span>，並將其指定為 <span style="background-color: #ccffcc;">supervisor</span> 的控制器。</h5>
 <h5><span style="background-color: #ccffff;">2. 使用Supervisor移動物體</span></h5>
 <h2>Tasks5</h2>
-<h2>Tasks6</h2>
+<h3>obj.檔案匯入</h3>
+<p>1.先將會製好的圖檔匯出成<span style="background-color: #ffff99;">obj.</span>檔</p>
+<p><img alt="" height="276" src="/images/籃球框1.png" width="396"/></p>
+<p>2.打開webot 首先:新增 Robot &gt;在<span>Robot裡新增children&gt;在children裡新增Solid &gt; 在 Solid 裡新增 children</span></p>
+<p>&gt; 在<span>children裡新增Shape&gt;接著在Shape下的 geometry NULL 裡新增 Mesh &gt;最後滑鼠點url兩下即可新增檔案</span></p>
+<p><span><img alt="" height="311" src="/images/螢幕擷取畫面 2025-04-29 111239.png" width="492"/></span></p>
+<p></p><h2>Tasks6</h2>
 <h1>Homework</h1>
 <p>作業 (30%)</p>
 <p>HW1 (5%): <span style="background-color: #ffff00;">建立由 Box 組成的平面四連桿機構 Webots 模擬場景</span></p>
